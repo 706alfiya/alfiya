@@ -1,0 +1,14 @@
+def selectionsort(array,size):
+     for ind in range(size):
+          min_index=ind
+          for j in range(ind + 1, size):
+               if array [j] < array[min_index]:
+                    min_index=j
+               (array[ind],array[min_index]) = (array[min_index], array[ind])
+arrsize=int(input("enter the number of element: "))
+arr=[]
+for i in range(arrsize):
+     arr.append(int(input("Enter the element :")))
+print("The element before sorting by selectionsort :", arr)
+selectionsort(arr,arrsize)
+print("The element after sorting by selectionsort", arr)
